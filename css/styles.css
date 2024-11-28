@@ -1,0 +1,265 @@
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+h1 { 
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.primary-link {
+  color: #8A2BE2
+
+}
+
+
+.primary-link:visited {
+  color: #5F9EA0;
+}
+
+.primary-link:hover , .primary-link:focus {
+  text-decoration: none;
+}
+
+.block-link {
+display: block;
+margin-bottom: 20px;
+} 
+
+.secondary-link {
+  color: #357b70;
+}
+
+
+.secondary-link:visited {
+  color: #05676e;
+
+}
+
+.secondary-link:hover , .secondary-link:focus {
+  text-decoration: none
+}
+
+.secondary-link:active {
+  color: #489c79;
+}
+
+button, .button {
+border: none;
+display: inline-block;
+font-family: inherit;
+background-color: #357b70;
+color: white;
+text-decoration:none;
+padding: 10px;
+border-radius: 3px;
+border-bottom: 2px solid #000;
+border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+transition-duration: 0.2s;
+transition-property: opacity 0.2s;
+}
+
+button:hover, button:focus, .button:hover, .button:focus {
+cursor: pointer;
+opacity: 0.8;
+
+}
+
+.button_secondary {
+
+background-color: #e0b354;
+color: #2b2b2b;
+}
+
+
+
+.profile_portrait {
+  width: 250px;
+  margin-right: 40px;
+  height: auto;
+  float:left;
+  margin-top: 20px;
+  margin-bottom: 20px; 
+  border-radius: 50%;
+}
+
+
+
+.page-footer {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  }
+
+.profile {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.page-header {
+  display:flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+ 
+  padding: 20px;
+}
+
+.page-header_item {
+  flex: 0 1 200px;
+}
+
+.page-header_item:last-child {
+flex-grow: 1;
+text-align: right;
+}
+
+.navigation-list {
+list-style-type: none;
+}
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 10px;
+  border: 2px solid red;
+  max-width: 100%; 
+  padding: 0 10px; 
+  box-sizing: border-box; 
+}
+
+
+.grid_item {
+  background-color: lightgray;
+  padding: 20px;
+  border: 2px solid blue;
+  max-width: 100%;
+  max-height: 500px; 
+  box-sizing: border-box;
+}
+
+
+.grid_item:last-child {
+  grid-column: auto / auto; 
+grid-row: auto / auto; 
+}
+
+.grid_item {
+  background-color: lightgray;
+  padding: 20px;
+  border: 2px solid blue;
+ }
+ 
+
+
+@media all and (max-width: 500px) {
+
+  .grid {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    background-color: lightblue;
+
+  }
+
+  
+
+  h1 { 
+    font-size: 22px;
+  }
+
+}
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    background-color: lightgreen;
+  }
+ 
+
+  h1 {
+    font-size: 22px;
+  }
+}
+@media all and (min-width: 750px) {
+  .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: lightpink;
+  }
+}
+
+.about-section {
+  display: grid;
+  place-items: center; 
+  text-align: center; 
+    
+}
+
+.rooster-body {
+animation: pulse 2s infinite;
+}
+
+@keyframes color-change {
+0% {
+    fill: #FFF145;  /* Start color */
+}
+50% {
+    fill: #FF5733;  /* Intermediate color */
+}
+100% {
+    fill: #FFF145;  /* End color */
+}
+}
+
+/* Apply the animation to elements with the .sun class */
+.sun {
+animation-duration: 4s;
+animation-name: color-change;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+animation-timing-function: linear;
+}
+
+svg {
+margin-top: 50px;  
+display: block;    
+margin-left: auto;
+margin-right: auto;  
+}
+
+.bird {
+position: absolute;
+top: 50%;  /* Vertically center the bird */
+right: 0;  /* Initially position the bird at the right edge */
+transform-origin: center center;
+animation: fly-bird 3s infinite ease-in-out;
+}
+
+@keyframes fly-bird {
+0% {
+  transform: translateX(0);  /* Start at the right edge */
+}
+50% {
+  transform: translateX(-20px);  /* Move slightly more to the left */
+}
+100% {
+  transform: translateX(0);  /* Return to the right edge */
+}
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title> Contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="css/styleproduction.css">
+    <script src="js/tota11y.min.js"></script>
+</head>
+
+
+<body>
+
+    <header>
+        <img src="img/logo.webp" alt="logo" width="150">
+        <div>
+            <nav role="navigation">
+                <ul role="menubar" class="navigation-list">
+                    <li role="presentation">
+                        <a href="index.html" role="menuitem" class="navigation-list_item navigation-list_item--active"> Home</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="about.html" role="menuitem" class="navigation-list_item" aria-label="Learn more about me "> About</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="contact.html" role="menuitem" class="navigation-list_item"> Contact</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <h1>Contact</h1>
+
+        </div>
+    </header>
+    
+
+    <div>
+        <nav>
+            CareerFoundry GmbH<br>
+            Lohmühlenstraße <br>
+            12435 Berlin <br>
+            Deutschland <br>
+            <br>
+            Tel +49 30 4849 2016 <br>
+            office@careerfoundry.com <br>
+            Skype hello.careerfoundry
+            <a href="mailto:office@careerfoundry.com"> office@careerfoundry.com</a> <br>
+            <a href="mailto:office@careerfoundry.com"> Contact me</a>
+        </nav>
+    </div>
+    
+
+    <nav role="navigation">
+        <form action="" method="post" id="contact-form">
+            <label for="email" class="standard-label">E-mail:</label>
+            <input type="email" id="email" required>
+
+            <label for="tel" class="standard-label">Telephone: </label>
+            <input type="tel" id="tel" pattern="\d{3}[\-]\d{3}[\-]\d{4}">
+
+            <label for="message" class="standard label"> Message:</label>
+            <textarea maxlength="240" id="message" required></textarea>
+
+            <input type="submit" value="Send message">
+        </form>
+    </nav>
+
+</body>
+
+</html>
